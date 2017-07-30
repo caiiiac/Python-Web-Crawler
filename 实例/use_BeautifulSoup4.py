@@ -9,5 +9,10 @@ soup = BeautifulSoup(demo, 'html.parser')
 # print(soup.title)
 # print(soup.a)
 
-print(soup.a.name)
-print(soup.a.parent.name)
+# print(soup.a.name)
+# print(soup.a.parent.name)
+
+# 属性
+print(soup.a.attrs)
+print(soup.a.attrs['class'])
+print(type(soup.a.attrs))
