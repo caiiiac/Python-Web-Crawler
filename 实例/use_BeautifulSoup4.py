@@ -18,6 +18,13 @@ soup = BeautifulSoup(demo, 'html.parser')
 # print(type(soup.a.attrs))
 
 # tag的NavigableString
-print(soup.p)
-print(soup.p.string)
-print(type(soup.p.string))
+# print(soup.p)
+# print(soup.p.string)
+# print(type(soup.p.string))
+
+# tag的Comment
+newsoup = BeautifulSoup("<b><!--This is a comment.--></b><p>This is not a comment</p>","html.parser")
+print(newsoup.b.string)
+print(type(newsoup.b.string))
+print(newsoup.p.string)
+print(type(newsoup.p.string))
