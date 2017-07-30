@@ -13,6 +13,11 @@ soup = BeautifulSoup(demo, 'html.parser')
 # print(soup.a.parent.name)
 
 # 属性
-print(soup.a.attrs)
-print(soup.a.attrs['class'])
-print(type(soup.a.attrs))
+# print(soup.a.attrs)
+# print(soup.a.attrs['class'])
+# print(type(soup.a.attrs))
+
+# tag的NavigableString
+print(soup.p)
+print(soup.p.string)
+print(type(soup.p.string))
