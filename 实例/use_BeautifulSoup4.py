@@ -29,3 +29,5 @@ soup = BeautifulSoup(demo, 'html.parser')
 #print(newsoup.p.string)
 #print(type(newsoup.p.string))
 
+# 标签树的下午遍历
+print(soup.head)
