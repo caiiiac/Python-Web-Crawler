@@ -25,9 +25,21 @@ soup = BeautifulSoup(demo, 'html.parser')
 # tag的Comment
 #newsoup = BeautifulSoup("<b><!--This is a comment.--></b><p>This is not a comment</p>","html.parser")
 #print(newsoup.b.string)
-#print(type(newsoup.b.string))
+#print(type(newsoup.b.string)
 #print(newsoup.p.string)
 #print(type(newsoup.p.string))
 
-# 标签树的下午遍历
-print(soup.head)
+# 标签树的下行遍历
+# print(soup.head)
+# print(soup.head.contents)
+# print(soup.body.contents)
+# print(len(soup.body.contents))
+# print(soup.body.contents[1])
+
+# 遍历儿子节点
+# for child in soup.body.children:
+# 	print(child)
+
+# 遍历子孙节点
+for child in soup.body.descendants:
+	print(child)
