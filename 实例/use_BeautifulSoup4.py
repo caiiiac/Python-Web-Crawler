@@ -41,5 +41,14 @@ soup = BeautifulSoup(demo, 'html.parser')
 # 	print(child)
 
 # 遍历子孙节点
-for child in soup.body.descendants:
-	print(child)
+# for child in soup.body.descendants:
+# 	print(child)
+
+# 上行遍历
+print(soup.title.parent)
+
+for parent in soup.a.parents:
+	if parent is None:
+		print(parent)
+	else:
+		print(parent.name)
