@@ -45,10 +45,25 @@ soup = BeautifulSoup(demo, 'html.parser')
 # 	print(child)
 
 # 上行遍历
-print(soup.title.parent)
+# print(soup.title.parent)
 
-for parent in soup.a.parents:
-	if parent is None:
-		print(parent)
-	else:
-		print(parent.name)
+# for parent in soup.a.parents:
+# 	if parent is None:
+# 		print(parent)
+# 	else:
+# 		print(parent.name)
+
+# 平行遍历
+# print(soup.a.next_sibling)
+# print(soup.a.next_sibling.next_sibling)
+# print(soup.a.previous_sibling)
+# print(soup.a.previous_sibling.previous_sibling)
+# print(soup.a.parent)
+
+# 遍历后续节点
+for sibling in soup.a.next_siblings:
+	print(sibling)
+
+# 遍历前续节点
+for sibling in soup.a.previous_siblings:
+	print(sibling)
