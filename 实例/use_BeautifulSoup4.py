@@ -61,9 +61,13 @@ soup = BeautifulSoup(demo, 'html.parser')
 # print(soup.a.parent)
 
 # 遍历后续节点
-for sibling in soup.a.next_siblings:
-	print(sibling)
+# for sibling in soup.a.next_siblings:
+# 	print(sibling)
 
 # 遍历前续节点
-for sibling in soup.a.previous_siblings:
-	print(sibling)
+# for sibling in soup.a.previous_siblings:
+# 	print(sibling)
+
+# prettify
+# print(soup.prettify())
+print(soup.a.prettify())
