@@ -74,8 +74,44 @@ soup = BeautifulSoup(demo, 'html.parser')
 
 
 # 信息提取
+# <>.find_all(name, attrs, recursive, string, **kwargs)
+# .name : 对标签名称的检索字符串
+# .attrs : 对标签属性值的检索字符串,可标注属性检索
+# .recursive : 是否对子孙全部检索,默认True
+# .string : <>...</>中字符串区域的检索字符串
 
-for link in soup.find_all('a'):
-	print(link.get('href'))
+# .name 
+# for link in soup.find_all('a'):
+	# print(link.get('href'))
+
+# 对标签名称的检索
+# print(soup.find_all(['a','b']))
+
+# for tag in soup.find_all(True):
+# 	print(tag.name)
+
+# import re
+# for tag in soup.find_all(re.compile('b')):
+# 	print(tag.name)
+
+# .attrs
+# print(soup.find_all('p','course'))
+# print(soup.find_all(id='link1'))
+
+# import re
+# print(soup.find_all(id='link'))
+# print(soup.find_all(id=re.compile('link')))
 
 
+# .recursive
+# print(soup.find_all('a',recursive=False))
+
+
+# .string
+# import re
+# print(soup.find_all(string='Basic Python'))
+# print(soup.find_all(string=re.compile('python')))
+
+# <tag>(..)  等价于  <tag>.find_all(..)
+# soup(..)   等价于 soup.find_all(..)
+print(soup('a'))
