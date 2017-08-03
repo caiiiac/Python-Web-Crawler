@@ -70,4 +70,12 @@ soup = BeautifulSoup(demo, 'html.parser')
 
 # prettify
 # print(soup.prettify())
-print(soup.a.prettify())
+# print(soup.a.prettify())
+
+
+# 信息提取
+
+for link in soup.find_all('a'):
+	print(link.get('href'))
+
+
