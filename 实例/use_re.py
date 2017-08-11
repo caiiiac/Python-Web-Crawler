@@ -27,7 +27,17 @@ import re
 # print(str)
 
 # 面向对象式用法
-pat = re.compile(r'[1-9]\d{5}')
-rst =  pat.search('BIT 100081')
-if rst:
-	print(rst.group(0))
+# pat = re.compile(r'[1-9]\d{5}')
+# rst =  pat.search('BIT 100081')
+# if rst:
+# 	print(rst.group(0))
+
+# Match对象实例
+m = re.search(r'[1-9]\d{5}', "BIT100081 TSU100084")
+print(m.string)
+print(m.pos)
+print(m.endpos)
+print(m.group(0))
+print(m.start())
+print(m.end())
+print(m.span())
