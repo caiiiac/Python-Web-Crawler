@@ -35,6 +35,7 @@ import re
 # Match对象实例
 # m = re.search(r'[1-9]\d{5}', "BIT100081 TSU100084")
 # print(m.string)
+# print(m.re)
 # print(m.pos)
 # print(m.endpos)
 # print(m.group(0))
@@ -46,5 +47,6 @@ import re
 match = re.search(r'PY.*N', 'PYANBNCNDN')
 print(match.group(0))
 
+# 最小匹配
 match = re.search(r'PY.*?N', 'PYANBNCNDN')
 print(match.group(0))
