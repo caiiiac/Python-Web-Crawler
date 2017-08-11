@@ -33,11 +33,18 @@ import re
 # 	print(rst.group(0))
 
 # Match对象实例
-m = re.search(r'[1-9]\d{5}', "BIT100081 TSU100084")
-print(m.string)
-print(m.pos)
-print(m.endpos)
-print(m.group(0))
-print(m.start())
-print(m.end())
-print(m.span())
+# m = re.search(r'[1-9]\d{5}', "BIT100081 TSU100084")
+# print(m.string)
+# print(m.pos)
+# print(m.endpos)
+# print(m.group(0))
+# print(m.start())
+# print(m.end())
+# print(m.span())
+
+# 贪婪匹配
+match = re.search(r'PY.*N', 'PYANBNCNDN')
+print(match.group(0))
+
+match = re.search(r'PY.*?N', 'PYANBNCNDN')
+print(match.group(0))
